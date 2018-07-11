@@ -1,0 +1,1068 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SCloudService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://10.0.0.240:8801/SCloudService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://10.0.0.240:8801/SCloudService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.0.0.240:8801/SCloudService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+      <xsd:import schemaLocation="http://10.0.0.240:8801/SCloudService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Infrastructure.CrossCutting.Logging" />
+      <xsd:import schemaLocation="http://10.0.0.240:8801/SCloudService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" />
+      <xsd:import schemaLocation="http://10.0.0.240:8801/SCloudService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISCloudService_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_ModifyUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyUser" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_ModifyUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_RemoveUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUser" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_RemoveUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_ModifyUserPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyUserPassword" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_ModifyUserPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyUserPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_CheckUserValid_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUserValid" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_CheckUserValid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUserValidResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_QuerySurpathCaseByPage_InputMessage">
+    <wsdl:part name="parameters" element="tns:QuerySurpathCaseByPage" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_QuerySurpathCaseByPage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QuerySurpathCaseByPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_RegisterSurpathCase_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterSurpathCase" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_RegisterSurpathCase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterSurpathCaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetSurpathCaseDetailInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurpathCaseDetailInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetSurpathCaseDetailInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSurpathCaseDetailInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_AssignEngineerAndExpertToSurpathCase_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssignEngineerAndExpertToSurpathCase" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_AssignEngineerAndExpertToSurpathCase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssignEngineerAndExpertToSurpathCaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_SendReconstructionResultToExpert_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendReconstructionResultToExpert" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_SendReconstructionResultToExpert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendReconstructionResultToExpertResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_DenyReconstructionResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:DenyReconstructionResult" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_DenyReconstructionResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DenyReconstructionResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_PublishReconstructionResultToDoctor_InputMessage">
+    <wsdl:part name="parameters" element="tns:PublishReconstructionResultToDoctor" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_PublishReconstructionResultToDoctor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PublishReconstructionResultToDoctorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_BringUserTypeEnumToClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:BringUserTypeEnumToClient" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_BringUserTypeEnumToClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BringUserTypeEnumToClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_BringIsNeedSurgeryPlanEnumToClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:BringIsNeedSurgeryPlanEnumToClient" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_BringIsNeedSurgeryPlanEnumToClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BringIsNeedSurgeryPlanEnumToClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_BringSurpathCaseStatusToClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:BringSurpathCaseStatusToClient" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_BringSurpathCaseStatusToClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BringSurpathCaseStatusToClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_BringPermissionEnumToClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:BringPermissionEnumToClient" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_BringPermissionEnumToClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BringPermissionEnumToClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_AddUserType_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserType" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_AddUserType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_ModifyUserType_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyUserType" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_ModifyUserType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyUserTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_RemoveUserType_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserType" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_RemoveUserType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetUserTypeByValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserTypeByValue" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetUserTypeByValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserTypeByValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_AssignPermissionToUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssignPermissionToUser" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_AssignPermissionToUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssignPermissionToUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetAllPermissions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPermissions" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetAllPermissions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetPermissionByValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPermissionByValue" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetPermissionByValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPermissionByValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_AddPermission_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPermission" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_AddPermission_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPermissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetScreenShotList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetScreenShotList" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetScreenShotList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetScreenShotListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_AddDoctorFeedBack_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDoctorFeedBack" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_AddDoctorFeedBack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDoctorFeedBackResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetDoctorFeedBackScreenShotList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctorFeedBackScreenShotList" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetDoctorFeedBackScreenShotList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctorFeedBackScreenShotListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetAllUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsers" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetAllUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetAllUserTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUserTypes" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetAllUserTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUserTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_AddHospital_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddHospital" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_AddHospital_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddHospitalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_ModifyHospital_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyHospital" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_ModifyHospital_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyHospitalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_RemoveHospital_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveHospital" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_RemoveHospital_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveHospitalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetAllHospitals_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllHospitals" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetAllHospitals_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllHospitalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetHospitalByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHospitalByName" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetHospitalByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHospitalByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetUsersByUserType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersByUserType" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetUsersByUserType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersByUserTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetUserByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByID" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetUserByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetUserByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByCode" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetUserByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetVerifyRecordList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVerifyRecordList" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetVerifyRecordList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVerifyRecordListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_AssignMulityPermissionToUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssignMulityPermissionToUser" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_AssignMulityPermissionToUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssignMulityPermissionToUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_AddScreenShots_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddScreenShots" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_AddScreenShots_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddScreenShotsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_AddDoctorFeedBackScreenShots_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDoctorFeedBackScreenShots" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_AddDoctorFeedBackScreenShots_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDoctorFeedBackScreenShotsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_IsUserCodeAlreadyExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserCodeAlreadyExists" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_IsUserCodeAlreadyExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserCodeAlreadyExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_SendSurpathCaseStatusToServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendSurpathCaseStatusToServer" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_SendSurpathCaseStatusToServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendSurpathCaseStatusToServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetEngineerAssignedWorkStatistics_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEngineerAssignedWorkStatistics" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetEngineerAssignedWorkStatistics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEngineerAssignedWorkStatisticsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetEngineerFinishedWorkStatistics_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEngineerFinishedWorkStatistics" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetEngineerFinishedWorkStatistics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEngineerFinishedWorkStatisticsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetExpertAssignedWorkStatistics_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpertAssignedWorkStatistics" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetExpertAssignedWorkStatistics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpertAssignedWorkStatisticsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetExpertFinishedWorkStatistics_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpertFinishedWorkStatistics" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetExpertFinishedWorkStatistics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpertFinishedWorkStatisticsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetEngineerAverageProcessTimeStatistics_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEngineerAverageProcessTimeStatistics" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetEngineerAverageProcessTimeStatistics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEngineerAverageProcessTimeStatisticsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetExpertAverageVerifyTimeStatistics_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpertAverageVerifyTimeStatistics" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetExpertAverageVerifyTimeStatistics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpertAverageVerifyTimeStatisticsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_RemoveSurpathCaseLogicallyInDataBase_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSurpathCaseLogicallyInDataBase" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_RemoveSurpathCaseLogicallyInDataBase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSurpathCaseLogicallyInDataBaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_NotifyServerFTPDataUploadFinished_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyServerFTPDataUploadFinished" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_NotifyServerFTPDataUploadFinished_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyServerFTPDataUploadFinishedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetDiagnosisReportList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiagnosisReportList" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_GetDiagnosisReportList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiagnosisReportListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_AppendDiagnosisReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:AppendDiagnosisReport" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_AppendDiagnosisReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AppendDiagnosisReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_ExcludeEngineerProcessSpendTimeFromStatistics_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExcludeEngineerProcessSpendTimeFromStatistics" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_ExcludeEngineerProcessSpendTimeFromStatistics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExcludeEngineerProcessSpendTimeFromStatisticsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_ExcludeExpertVerifySpendTimeFromStatistics_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExcludeExpertVerifySpendTimeFromStatistics" />
+  </wsdl:message>
+  <wsdl:message name="ISCloudService_ExcludeExpertVerifySpendTimeFromStatistics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExcludeExpertVerifySpendTimeFromStatisticsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISCloudService">
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/AddUser" message="tns:ISCloudService_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/AddUserResponse" message="tns:ISCloudService_AddUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/ModifyUser" message="tns:ISCloudService_ModifyUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/ModifyUserResponse" message="tns:ISCloudService_ModifyUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/RemoveUser" message="tns:ISCloudService_RemoveUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/RemoveUserResponse" message="tns:ISCloudService_RemoveUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUserPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/ModifyUserPassword" message="tns:ISCloudService_ModifyUserPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/ModifyUserPasswordResponse" message="tns:ISCloudService_ModifyUserPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUserValid">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/CheckUserValid" message="tns:ISCloudService_CheckUserValid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/CheckUserValidResponse" message="tns:ISCloudService_CheckUserValid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuerySurpathCaseByPage">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/QuerySurpathCaseByPage" message="tns:ISCloudService_QuerySurpathCaseByPage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/QuerySurpathCaseByPageResponse" message="tns:ISCloudService_QuerySurpathCaseByPage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterSurpathCase">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/RegisterSurpathCase" message="tns:ISCloudService_RegisterSurpathCase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/RegisterSurpathCaseResponse" message="tns:ISCloudService_RegisterSurpathCase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSurpathCaseDetailInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/GetSurpathCaseDetailInfo" message="tns:ISCloudService_GetSurpathCaseDetailInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/GetSurpathCaseDetailInfoResponse" message="tns:ISCloudService_GetSurpathCaseDetailInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignEngineerAndExpertToSurpathCase">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/AssignEngineerAndExpertToSurpathCase" message="tns:ISCloudService_AssignEngineerAndExpertToSurpathCase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/AssignEngineerAndExpertToSurpathCaseResponse" message="tns:ISCloudService_AssignEngineerAndExpertToSurpathCase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendReconstructionResultToExpert">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/SendReconstructionResultToExpert" message="tns:ISCloudService_SendReconstructionResultToExpert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/SendReconstructionResultToExpertResponse" message="tns:ISCloudService_SendReconstructionResultToExpert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DenyReconstructionResult">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/DenyReconstructionResult" message="tns:ISCloudService_DenyReconstructionResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/DenyReconstructionResultResponse" message="tns:ISCloudService_DenyReconstructionResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PublishReconstructionResultToDoctor">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/PublishReconstructionResultToDoctor" message="tns:ISCloudService_PublishReconstructionResultToDoctor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/PublishReconstructionResultToDoctorResponse" message="tns:ISCloudService_PublishReconstructionResultToDoctor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BringUserTypeEnumToClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/BringUserTypeEnumToClient" message="tns:ISCloudService_BringUserTypeEnumToClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/BringUserTypeEnumToClientResponse" message="tns:ISCloudService_BringUserTypeEnumToClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BringIsNeedSurgeryPlanEnumToClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/BringIsNeedSurgeryPlanEnumToClient" message="tns:ISCloudService_BringIsNeedSurgeryPlanEnumToClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/BringIsNeedSurgeryPlanEnumToClientResponse" message="tns:ISCloudService_BringIsNeedSurgeryPlanEnumToClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BringSurpathCaseStatusToClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/BringSurpathCaseStatusToClient" message="tns:ISCloudService_BringSurpathCaseStatusToClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/BringSurpathCaseStatusToClientResponse" message="tns:ISCloudService_BringSurpathCaseStatusToClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BringPermissionEnumToClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/BringPermissionEnumToClient" message="tns:ISCloudService_BringPermissionEnumToClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/BringPermissionEnumToClientResponse" message="tns:ISCloudService_BringPermissionEnumToClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/AddUserType" message="tns:ISCloudService_AddUserType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/AddUserTypeResponse" message="tns:ISCloudService_AddUserType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUserType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/ModifyUserType" message="tns:ISCloudService_ModifyUserType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/ModifyUserTypeResponse" message="tns:ISCloudService_ModifyUserType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/RemoveUserType" message="tns:ISCloudService_RemoveUserType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/RemoveUserTypeResponse" message="tns:ISCloudService_RemoveUserType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserTypeByValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/GetUserTypeByValue" message="tns:ISCloudService_GetUserTypeByValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/GetUserTypeByValueResponse" message="tns:ISCloudService_GetUserTypeByValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignPermissionToUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/AssignPermissionToUser" message="tns:ISCloudService_AssignPermissionToUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/AssignPermissionToUserResponse" message="tns:ISCloudService_AssignPermissionToUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPermissions">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/GetAllPermissions" message="tns:ISCloudService_GetAllPermissions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/GetAllPermissionsResponse" message="tns:ISCloudService_GetAllPermissions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPermissionByValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/GetPermissionByValue" message="tns:ISCloudService_GetPermissionByValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/GetPermissionByValueResponse" message="tns:ISCloudService_GetPermissionByValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPermission">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/AddPermission" message="tns:ISCloudService_AddPermission_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/AddPermissionResponse" message="tns:ISCloudService_AddPermission_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScreenShotList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/GetScreenShotList" message="tns:ISCloudService_GetScreenShotList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/GetScreenShotListResponse" message="tns:ISCloudService_GetScreenShotList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDoctorFeedBack">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/AddDoctorFeedBack" message="tns:ISCloudService_AddDoctorFeedBack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/AddDoctorFeedBackResponse" message="tns:ISCloudService_AddDoctorFeedBack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorFeedBackScreenShotList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/GetDoctorFeedBackScreenShotList" message="tns:ISCloudService_GetDoctorFeedBackScreenShotList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/GetDoctorFeedBackScreenShotListResponse" message="tns:ISCloudService_GetDoctorFeedBackScreenShotList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/GetAllUsers" message="tns:ISCloudService_GetAllUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/GetAllUsersResponse" message="tns:ISCloudService_GetAllUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUserTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/GetAllUserTypes" message="tns:ISCloudService_GetAllUserTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/GetAllUserTypesResponse" message="tns:ISCloudService_GetAllUserTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddHospital">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/AddHospital" message="tns:ISCloudService_AddHospital_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/AddHospitalResponse" message="tns:ISCloudService_AddHospital_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyHospital">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/ModifyHospital" message="tns:ISCloudService_ModifyHospital_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/ModifyHospitalResponse" message="tns:ISCloudService_ModifyHospital_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveHospital">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/RemoveHospital" message="tns:ISCloudService_RemoveHospital_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/RemoveHospitalResponse" message="tns:ISCloudService_RemoveHospital_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllHospitals">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/GetAllHospitals" message="tns:ISCloudService_GetAllHospitals_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/GetAllHospitalsResponse" message="tns:ISCloudService_GetAllHospitals_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitalByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/GetHospitalByName" message="tns:ISCloudService_GetHospitalByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/GetHospitalByNameResponse" message="tns:ISCloudService_GetHospitalByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByUserType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/GetUsersByUserType" message="tns:ISCloudService_GetUsersByUserType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/GetUsersByUserTypeResponse" message="tns:ISCloudService_GetUsersByUserType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/GetUserByID" message="tns:ISCloudService_GetUserByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/GetUserByIDResponse" message="tns:ISCloudService_GetUserByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/GetUserByCode" message="tns:ISCloudService_GetUserByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/GetUserByCodeResponse" message="tns:ISCloudService_GetUserByCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVerifyRecordList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/GetVerifyRecordList" message="tns:ISCloudService_GetVerifyRecordList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/GetVerifyRecordListResponse" message="tns:ISCloudService_GetVerifyRecordList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignMulityPermissionToUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/AssignMulityPermissionToUser" message="tns:ISCloudService_AssignMulityPermissionToUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/AssignMulityPermissionToUserResponse" message="tns:ISCloudService_AssignMulityPermissionToUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddScreenShots">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/AddScreenShots" message="tns:ISCloudService_AddScreenShots_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/AddScreenShotsResponse" message="tns:ISCloudService_AddScreenShots_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDoctorFeedBackScreenShots">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/AddDoctorFeedBackScreenShots" message="tns:ISCloudService_AddDoctorFeedBackScreenShots_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/AddDoctorFeedBackScreenShotsResponse" message="tns:ISCloudService_AddDoctorFeedBackScreenShots_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUserCodeAlreadyExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/IsUserCodeAlreadyExists" message="tns:ISCloudService_IsUserCodeAlreadyExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/IsUserCodeAlreadyExistsResponse" message="tns:ISCloudService_IsUserCodeAlreadyExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSurpathCaseStatusToServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/SendSurpathCaseStatusToServer" message="tns:ISCloudService_SendSurpathCaseStatusToServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/SendSurpathCaseStatusToServerResponse" message="tns:ISCloudService_SendSurpathCaseStatusToServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEngineerAssignedWorkStatistics">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/GetEngineerAssignedWorkStatistics" message="tns:ISCloudService_GetEngineerAssignedWorkStatistics_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/GetEngineerAssignedWorkStatisticsResponse" message="tns:ISCloudService_GetEngineerAssignedWorkStatistics_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEngineerFinishedWorkStatistics">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/GetEngineerFinishedWorkStatistics" message="tns:ISCloudService_GetEngineerFinishedWorkStatistics_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/GetEngineerFinishedWorkStatisticsResponse" message="tns:ISCloudService_GetEngineerFinishedWorkStatistics_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpertAssignedWorkStatistics">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/GetExpertAssignedWorkStatistics" message="tns:ISCloudService_GetExpertAssignedWorkStatistics_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/GetExpertAssignedWorkStatisticsResponse" message="tns:ISCloudService_GetExpertAssignedWorkStatistics_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpertFinishedWorkStatistics">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/GetExpertFinishedWorkStatistics" message="tns:ISCloudService_GetExpertFinishedWorkStatistics_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/GetExpertFinishedWorkStatisticsResponse" message="tns:ISCloudService_GetExpertFinishedWorkStatistics_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEngineerAverageProcessTimeStatistics">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/GetEngineerAverageProcessTimeStatistics" message="tns:ISCloudService_GetEngineerAverageProcessTimeStatistics_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/GetEngineerAverageProcessTimeStatisticsResponse" message="tns:ISCloudService_GetEngineerAverageProcessTimeStatistics_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpertAverageVerifyTimeStatistics">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/GetExpertAverageVerifyTimeStatistics" message="tns:ISCloudService_GetExpertAverageVerifyTimeStatistics_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/GetExpertAverageVerifyTimeStatisticsResponse" message="tns:ISCloudService_GetExpertAverageVerifyTimeStatistics_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSurpathCaseLogicallyInDataBase">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/RemoveSurpathCaseLogicallyInDataBase" message="tns:ISCloudService_RemoveSurpathCaseLogicallyInDataBase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/RemoveSurpathCaseLogicallyInDataBaseResponse" message="tns:ISCloudService_RemoveSurpathCaseLogicallyInDataBase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyServerFTPDataUploadFinished">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/NotifyServerFTPDataUploadFinished" message="tns:ISCloudService_NotifyServerFTPDataUploadFinished_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/NotifyServerFTPDataUploadFinishedResponse" message="tns:ISCloudService_NotifyServerFTPDataUploadFinished_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiagnosisReportList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/GetDiagnosisReportList" message="tns:ISCloudService_GetDiagnosisReportList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/GetDiagnosisReportListResponse" message="tns:ISCloudService_GetDiagnosisReportList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AppendDiagnosisReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/AppendDiagnosisReport" message="tns:ISCloudService_AppendDiagnosisReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/AppendDiagnosisReportResponse" message="tns:ISCloudService_AppendDiagnosisReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExcludeEngineerProcessSpendTimeFromStatistics">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/ExcludeEngineerProcessSpendTimeFromStatistics" message="tns:ISCloudService_ExcludeEngineerProcessSpendTimeFromStatistics_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/ExcludeEngineerProcessSpendTimeFromStatisticsResponse" message="tns:ISCloudService_ExcludeEngineerProcessSpendTimeFromStatistics_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExcludeExpertVerifySpendTimeFromStatistics">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCloudService/ExcludeExpertVerifySpendTimeFromStatistics" message="tns:ISCloudService_ExcludeExpertVerifySpendTimeFromStatistics_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCloudService/ExcludeExpertVerifySpendTimeFromStatisticsResponse" message="tns:ISCloudService_ExcludeExpertVerifySpendTimeFromStatistics_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISCloudService" type="tns:ISCloudService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUser">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/ModifyUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUser">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/RemoveUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUserPassword">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/ModifyUserPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUserValid">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/CheckUserValid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuerySurpathCaseByPage">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/QuerySurpathCaseByPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterSurpathCase">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/RegisterSurpathCase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSurpathCaseDetailInfo">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/GetSurpathCaseDetailInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignEngineerAndExpertToSurpathCase">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/AssignEngineerAndExpertToSurpathCase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendReconstructionResultToExpert">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/SendReconstructionResultToExpert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DenyReconstructionResult">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/DenyReconstructionResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PublishReconstructionResultToDoctor">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/PublishReconstructionResultToDoctor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BringUserTypeEnumToClient">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/BringUserTypeEnumToClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BringIsNeedSurgeryPlanEnumToClient">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/BringIsNeedSurgeryPlanEnumToClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BringSurpathCaseStatusToClient">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/BringSurpathCaseStatusToClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BringPermissionEnumToClient">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/BringPermissionEnumToClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserType">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/AddUserType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUserType">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/ModifyUserType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserType">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/RemoveUserType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserTypeByValue">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/GetUserTypeByValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignPermissionToUser">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/AssignPermissionToUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPermissions">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/GetAllPermissions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPermissionByValue">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/GetPermissionByValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPermission">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/AddPermission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScreenShotList">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/GetScreenShotList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDoctorFeedBack">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/AddDoctorFeedBack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctorFeedBackScreenShotList">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/GetDoctorFeedBackScreenShotList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/GetAllUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUserTypes">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/GetAllUserTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddHospital">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/AddHospital" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyHospital">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/ModifyHospital" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveHospital">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/RemoveHospital" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllHospitals">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/GetAllHospitals" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitalByName">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/GetHospitalByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByUserType">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/GetUsersByUserType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByID">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/GetUserByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByCode">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/GetUserByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVerifyRecordList">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/GetVerifyRecordList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignMulityPermissionToUser">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/AssignMulityPermissionToUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddScreenShots">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/AddScreenShots" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDoctorFeedBackScreenShots">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/AddDoctorFeedBackScreenShots" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUserCodeAlreadyExists">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/IsUserCodeAlreadyExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSurpathCaseStatusToServer">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/SendSurpathCaseStatusToServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEngineerAssignedWorkStatistics">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/GetEngineerAssignedWorkStatistics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEngineerFinishedWorkStatistics">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/GetEngineerFinishedWorkStatistics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpertAssignedWorkStatistics">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/GetExpertAssignedWorkStatistics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpertFinishedWorkStatistics">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/GetExpertFinishedWorkStatistics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEngineerAverageProcessTimeStatistics">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/GetEngineerAverageProcessTimeStatistics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpertAverageVerifyTimeStatistics">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/GetExpertAverageVerifyTimeStatistics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSurpathCaseLogicallyInDataBase">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/RemoveSurpathCaseLogicallyInDataBase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyServerFTPDataUploadFinished">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/NotifyServerFTPDataUploadFinished" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiagnosisReportList">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/GetDiagnosisReportList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppendDiagnosisReport">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/AppendDiagnosisReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcludeEngineerProcessSpendTimeFromStatistics">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/ExcludeEngineerProcessSpendTimeFromStatistics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcludeExpertVerifySpendTimeFromStatistics">
+      <soap:operation soapAction="http://tempuri.org/ISCloudService/ExcludeExpertVerifySpendTimeFromStatistics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SCloudService">
+    <wsdl:port name="BasicHttpBinding_ISCloudService" binding="tns:BasicHttpBinding_ISCloudService">
+      <soap:address location="http://10.0.0.240:8801/SCloudService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

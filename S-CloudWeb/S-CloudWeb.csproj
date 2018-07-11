@@ -80,6 +80,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -203,6 +205,11 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\SCloudServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -229,6 +236,13 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <None Include="Service References\SCloudServices\SCloudService.disco" />
+    <None Include="Service References\SCloudServices\configuration91.svcinfo" />
+    <None Include="Service References\SCloudServices\configuration.svcinfo" />
+    <None Include="Service References\SCloudServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -243,6 +257,97 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <None Include="Service References\SCloudServices\SCloudService.wsdl" />
+    <None Include="Service References\SCloudServices\SCloudService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SCloudServices\SCloudService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SCloudServices\SCloudService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SCloudServices\SCloudService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SCloudServices\SCloudService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SCloudServices\SCloudService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\SCloudServices\S_CloudWeb.SCloudServices.OperationResultOfArrayOfDiagnosisReportDTObN2_PkCvD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SCloudServices\S_CloudWeb.SCloudServices.OperationResultOfArrayOfEngineerAverageProcessTimeStatisticsDTObN2_PkCvD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SCloudServices\S_CloudWeb.SCloudServices.OperationResultOfArrayOfEngineerWorkStatisticsDTObN2_PkCvD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SCloudServices\S_CloudWeb.SCloudServices.OperationResultOfArrayOfExpertAverageVerifyTimeStatisticsbN2_PkCvD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SCloudServices\S_CloudWeb.SCloudServices.OperationResultOfArrayOfExpertWorkStatisticsDTObN2_PkCvD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SCloudServices\S_CloudWeb.SCloudServices.OperationResultOfArrayOfFbScreenShotDTObN2_PkCvD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SCloudServices\S_CloudWeb.SCloudServices.OperationResultOfArrayOfHospitalDTObN2_PkCvD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SCloudServices\S_CloudWeb.SCloudServices.OperationResultOfArrayOfPermissionDTObN2_PkCvD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SCloudServices\S_CloudWeb.SCloudServices.OperationResultOfArrayOfQueryDTObN2_PkCvD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SCloudServices\S_CloudWeb.SCloudServices.OperationResultOfArrayOfScreenShotDTObN2_PkCvD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SCloudServices\S_CloudWeb.SCloudServices.OperationResultOfArrayOfUserDTObN2_PkCvD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SCloudServices\S_CloudWeb.SCloudServices.OperationResultOfArrayOfUserTypeDTObN2_PkCvD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SCloudServices\S_CloudWeb.SCloudServices.OperationResultOfArrayOfVerifyRecordDTObN2_PkCvD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SCloudServices\S_CloudWeb.SCloudServices.OperationResultOfFeedbackDTObN2_PkCvD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SCloudServices\S_CloudWeb.SCloudServices.OperationResultOfHospitalDTObN2_PkCvD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SCloudServices\S_CloudWeb.SCloudServices.OperationResultOfIsNeedSurgeryPlanEnumbN2_PkCvD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SCloudServices\S_CloudWeb.SCloudServices.OperationResultOfPermissionDTObN2_PkCvD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SCloudServices\S_CloudWeb.SCloudServices.OperationResultOfPermissionEnumbN2_PkCvD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SCloudServices\S_CloudWeb.SCloudServices.OperationResultOfSurpathCaseDTObN2_PkCvD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SCloudServices\S_CloudWeb.SCloudServices.OperationResultOfSurpathCaseStatusbN2_PkCvD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SCloudServices\S_CloudWeb.SCloudServices.OperationResultOfUserDTObN2_PkCvD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SCloudServices\S_CloudWeb.SCloudServices.OperationResultOfUserTypeDTObN2_PkCvD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SCloudServices\S_CloudWeb.SCloudServices.OperationResultOfUserTypeEnumbN2_PkCvD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SCloudServices\S_CloudWeb.SCloudServices.QuerySurpathCaseByPageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -254,6 +359,12 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SCloudServices\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

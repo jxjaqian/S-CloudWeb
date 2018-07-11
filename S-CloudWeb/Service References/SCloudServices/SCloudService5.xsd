@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.0.0.240:8801/SCloudService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+  <xs:complexType name="OperationResultOfUserDTObN2_PkCvD">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="UserDTO" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="Data" nillable="true" type="q1:UserDTO" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfUserDTObN2_PkCvD" nillable="true" type="tns:OperationResultOfUserDTObN2_PkCvD" />
+  <xs:complexType name="OperationResultOfArrayOfQueryDTObN2_PkCvD">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfQueryDTO" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="Data" nillable="true" type="q2:ArrayOfQueryDTO" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfQueryDTObN2_PkCvD" nillable="true" type="tns:OperationResultOfArrayOfQueryDTObN2_PkCvD" />
+  <xs:complexType name="OperationResultOfSurpathCaseDTObN2_PkCvD">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SurpathCaseDTO" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="Data" nillable="true" type="q3:SurpathCaseDTO" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfSurpathCaseDTObN2_PkCvD" nillable="true" type="tns:OperationResultOfSurpathCaseDTObN2_PkCvD" />
+  <xs:complexType name="OperationResultOfUserTypeEnumbN2_PkCvD">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="UserTypeEnum" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="Data" type="q4:UserTypeEnum" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfUserTypeEnumbN2_PkCvD" nillable="true" type="tns:OperationResultOfUserTypeEnumbN2_PkCvD" />
+  <xs:complexType name="OperationResultOfIsNeedSurgeryPlanEnumbN2_PkCvD">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="IsNeedSurgeryPlanEnum" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="Data" type="q5:IsNeedSurgeryPlanEnum" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfIsNeedSurgeryPlanEnumbN2_PkCvD" nillable="true" type="tns:OperationResultOfIsNeedSurgeryPlanEnumbN2_PkCvD" />
+  <xs:complexType name="OperationResultOfSurpathCaseStatusbN2_PkCvD">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SurpathCaseStatus" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="Data" type="q6:SurpathCaseStatus" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfSurpathCaseStatusbN2_PkCvD" nillable="true" type="tns:OperationResultOfSurpathCaseStatusbN2_PkCvD" />
+  <xs:complexType name="OperationResultOfPermissionEnumbN2_PkCvD">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="PermissionEnum" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="Data" type="q7:PermissionEnum" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfPermissionEnumbN2_PkCvD" nillable="true" type="tns:OperationResultOfPermissionEnumbN2_PkCvD" />
+  <xs:complexType name="OperationResultOfUserTypeDTObN2_PkCvD">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="UserTypeDTO" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="Data" nillable="true" type="q8:UserTypeDTO" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfUserTypeDTObN2_PkCvD" nillable="true" type="tns:OperationResultOfUserTypeDTObN2_PkCvD" />
+  <xs:complexType name="OperationResultOfArrayOfPermissionDTObN2_PkCvD">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfPermissionDTO" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="Data" nillable="true" type="q9:ArrayOfPermissionDTO" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfPermissionDTObN2_PkCvD" nillable="true" type="tns:OperationResultOfArrayOfPermissionDTObN2_PkCvD" />
+  <xs:complexType name="OperationResultOfPermissionDTObN2_PkCvD">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="PermissionDTO" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="Data" nillable="true" type="q10:PermissionDTO" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfPermissionDTObN2_PkCvD" nillable="true" type="tns:OperationResultOfPermissionDTObN2_PkCvD" />
+  <xs:complexType name="OperationResultOfArrayOfScreenShotDTObN2_PkCvD">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfScreenShotDTO" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="Data" nillable="true" type="q11:ArrayOfScreenShotDTO" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfScreenShotDTObN2_PkCvD" nillable="true" type="tns:OperationResultOfArrayOfScreenShotDTObN2_PkCvD" />
+  <xs:complexType name="OperationResultOfFeedbackDTObN2_PkCvD">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="FeedbackDTO" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="Data" nillable="true" type="q12:FeedbackDTO" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfFeedbackDTObN2_PkCvD" nillable="true" type="tns:OperationResultOfFeedbackDTObN2_PkCvD" />
+  <xs:complexType name="OperationResultOfArrayOfFbScreenShotDTObN2_PkCvD">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfFbScreenShotDTO" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="Data" nillable="true" type="q13:ArrayOfFbScreenShotDTO" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfFbScreenShotDTObN2_PkCvD" nillable="true" type="tns:OperationResultOfArrayOfFbScreenShotDTObN2_PkCvD" />
+  <xs:complexType name="OperationResultOfArrayOfUserDTObN2_PkCvD">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfUserDTO" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="Data" nillable="true" type="q14:ArrayOfUserDTO" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfUserDTObN2_PkCvD" nillable="true" type="tns:OperationResultOfArrayOfUserDTObN2_PkCvD" />
+  <xs:complexType name="OperationResultOfArrayOfUserTypeDTObN2_PkCvD">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfUserTypeDTO" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="Data" nillable="true" type="q15:ArrayOfUserTypeDTO" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfUserTypeDTObN2_PkCvD" nillable="true" type="tns:OperationResultOfArrayOfUserTypeDTObN2_PkCvD" />
+  <xs:complexType name="OperationResultOfHospitalDTObN2_PkCvD">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="HospitalDTO" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="Data" nillable="true" type="q16:HospitalDTO" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfHospitalDTObN2_PkCvD" nillable="true" type="tns:OperationResultOfHospitalDTObN2_PkCvD" />
+  <xs:complexType name="OperationResultOfArrayOfHospitalDTObN2_PkCvD">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfHospitalDTO" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="Data" nillable="true" type="q17:ArrayOfHospitalDTO" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfHospitalDTObN2_PkCvD" nillable="true" type="tns:OperationResultOfArrayOfHospitalDTObN2_PkCvD" />
+  <xs:complexType name="OperationResultOfArrayOfVerifyRecordDTObN2_PkCvD">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfVerifyRecordDTO" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="Data" nillable="true" type="q18:ArrayOfVerifyRecordDTO" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfVerifyRecordDTObN2_PkCvD" nillable="true" type="tns:OperationResultOfArrayOfVerifyRecordDTObN2_PkCvD" />
+  <xs:complexType name="OperationResultOfArrayOfEngineerWorkStatisticsDTObN2_PkCvD">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfEngineerWorkStatisticsDTO" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="Data" nillable="true" type="q19:ArrayOfEngineerWorkStatisticsDTO" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfEngineerWorkStatisticsDTObN2_PkCvD" nillable="true" type="tns:OperationResultOfArrayOfEngineerWorkStatisticsDTObN2_PkCvD" />
+  <xs:complexType name="OperationResultOfArrayOfExpertWorkStatisticsDTObN2_PkCvD">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfExpertWorkStatisticsDTO" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="Data" nillable="true" type="q20:ArrayOfExpertWorkStatisticsDTO" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfExpertWorkStatisticsDTObN2_PkCvD" nillable="true" type="tns:OperationResultOfArrayOfExpertWorkStatisticsDTObN2_PkCvD" />
+  <xs:complexType name="OperationResultOfArrayOfEngineerAverageProcessTimeStatisticsDTObN2_PkCvD">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfEngineerAverageProcessTimeStatisticsDTO" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="Data" nillable="true" type="q21:ArrayOfEngineerAverageProcessTimeStatisticsDTO" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfEngineerAverageProcessTimeStatisticsDTObN2_PkCvD" nillable="true" type="tns:OperationResultOfArrayOfEngineerAverageProcessTimeStatisticsDTObN2_PkCvD" />
+  <xs:complexType name="OperationResultOfArrayOfExpertAverageVerifyTimeStatisticsbN2_PkCvD">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfExpertAverageVerifyTimeStatistics" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="Data" nillable="true" type="q22:ArrayOfExpertAverageVerifyTimeStatistics" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfExpertAverageVerifyTimeStatisticsbN2_PkCvD" nillable="true" type="tns:OperationResultOfArrayOfExpertAverageVerifyTimeStatisticsbN2_PkCvD" />
+  <xs:complexType name="OperationResultOfArrayOfDiagnosisReportDTObN2_PkCvD">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="OperationResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfDiagnosisReportDTO" Namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="Data" nillable="true" type="q23:ArrayOfDiagnosisReportDTO" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperationResultOfArrayOfDiagnosisReportDTObN2_PkCvD" nillable="true" type="tns:OperationResultOfArrayOfDiagnosisReportDTObN2_PkCvD" />
+</xs:schema>

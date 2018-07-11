@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.0.0.240:8801/SCloudService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" />
+  <xs:import schemaLocation="http://10.0.0.240:8801/SCloudService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" />
+  <xs:import schemaLocation="http://10.0.0.240:8801/SCloudService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="AddUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="userDTO" nillable="true" type="q1:UserDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="AddUserResult" nillable="true" type="q2:OperationResultOfUserDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="userDTO" nillable="true" type="q3:UserDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="ModifyUserResult" nillable="true" type="q4:OperationResultOfUserDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="RemoveUserResult" nillable="true" type="q5:OperationResultOfUserDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyUserPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyUserPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="ModifyUserPasswordResult" nillable="true" type="q6:OperationResultOfUserDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckUserValid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckUserValidResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="CheckUserValidResult" nillable="true" type="q7:OperationResultOfUserDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QuerySurpathCaseByPage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="conditions" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QuerySurpathCaseByPageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="QuerySurpathCaseByPageResult" nillable="true" type="q8:OperationResultOfArrayOfQueryDTObN2_PkCvD" />
+        <xs:element minOccurs="0" name="totalCount" type="xs:int" />
+        <xs:element minOccurs="0" name="totalPage" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterSurpathCase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="dto" nillable="true" type="q9:SurpathCaseDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterSurpathCaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="RegisterSurpathCaseResult" nillable="true" type="q10:OperationResultOfSurpathCaseDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSurpathCaseDetailInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="surpathCaseID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSurpathCaseDetailInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="GetSurpathCaseDetailInfoResult" nillable="true" type="q11:OperationResultOfSurpathCaseDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssignEngineerAndExpertToSurpathCase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="surpathCaseID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="engineer" nillable="true" type="q12:UserDTO" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="expert" nillable="true" type="q13:UserDTO" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="assignPerson" nillable="true" type="q14:UserDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssignEngineerAndExpertToSurpathCaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="AssignEngineerAndExpertToSurpathCaseResult" nillable="true" type="q15:OperationResultOfSurpathCaseDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendReconstructionResultToExpert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="surpathCaseID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="processResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendReconstructionResultToExpertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="SendReconstructionResultToExpertResult" nillable="true" type="q16:OperationResultOfSurpathCaseDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DenyReconstructionResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="surpathCaseID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="comment" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DenyReconstructionResultResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="DenyReconstructionResultResult" nillable="true" type="q17:OperationResultOfSurpathCaseDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PublishReconstructionResultToDoctor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="surpathCaseID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="advise" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="surgeryPlan" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PublishReconstructionResultToDoctorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="PublishReconstructionResultToDoctorResult" nillable="true" type="q18:OperationResultOfSurpathCaseDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BringUserTypeEnumToClient">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BringUserTypeEnumToClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="BringUserTypeEnumToClientResult" nillable="true" type="q19:OperationResultOfUserTypeEnumbN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BringIsNeedSurgeryPlanEnumToClient">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BringIsNeedSurgeryPlanEnumToClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="BringIsNeedSurgeryPlanEnumToClientResult" nillable="true" type="q20:OperationResultOfIsNeedSurgeryPlanEnumbN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BringSurpathCaseStatusToClient">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BringSurpathCaseStatusToClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="BringSurpathCaseStatusToClientResult" nillable="true" type="q21:OperationResultOfSurpathCaseStatusbN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BringPermissionEnumToClient">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BringPermissionEnumToClientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="BringPermissionEnumToClientResult" nillable="true" type="q22:OperationResultOfPermissionEnumbN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUserType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="userTypeDTO" nillable="true" type="q23:UserTypeDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUserTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="AddUserTypeResult" nillable="true" type="q24:OperationResultOfUserTypeDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyUserType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="userTypeDTO" nillable="true" type="q25:UserTypeDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyUserTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="ModifyUserTypeResult" nillable="true" type="q26:OperationResultOfUserTypeDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveUserType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userTypeID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveUserTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="RemoveUserTypeResult" nillable="true" type="q27:OperationResultOfUserTypeDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserTypeByValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="userTypeValue" type="q28:UserTypeEnum" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserTypeByValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="GetUserTypeByValueResult" nillable="true" type="q29:OperationResultOfUserTypeDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssignPermissionToUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="permissionID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssignPermissionToUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="AssignPermissionToUserResult" nillable="true" type="q30:OperationResultOfUserDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPermissions">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPermissionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="GetAllPermissionsResult" nillable="true" type="q31:OperationResultOfArrayOfPermissionDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPermissionByValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="permissionValue" type="q32:PermissionEnum" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPermissionByValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="GetPermissionByValueResult" nillable="true" type="q33:OperationResultOfPermissionDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPermission">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="permissionDTO" nillable="true" type="q34:PermissionDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPermissionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="AddPermissionResult" nillable="true" type="q35:OperationResultOfPermissionDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetScreenShotList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="verifyRecordID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetScreenShotListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="GetScreenShotListResult" nillable="true" type="q36:OperationResultOfArrayOfScreenShotDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddDoctorFeedBack">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="surpathCaseID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="feedBackComment" nillable="true" type="xs:string" />
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="doctorFeedBackType" type="q37:DoctorFeedbackTypeEnum" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddDoctorFeedBackResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="AddDoctorFeedBackResult" nillable="true" type="q38:OperationResultOfFeedbackDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDoctorFeedBackScreenShotList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="surpathCaseID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDoctorFeedBackScreenShotListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="GetDoctorFeedBackScreenShotListResult" nillable="true" type="q39:OperationResultOfArrayOfFbScreenShotDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUsers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="GetAllUsersResult" nillable="true" type="q40:OperationResultOfArrayOfUserDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUserTypes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUserTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="GetAllUserTypesResult" nillable="true" type="q41:OperationResultOfArrayOfUserTypeDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddHospital">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="hospitalDTO" nillable="true" type="q42:HospitalDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddHospitalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="AddHospitalResult" nillable="true" type="q43:OperationResultOfHospitalDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyHospital">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="hospitalDTO" nillable="true" type="q44:HospitalDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyHospitalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="ModifyHospitalResult" nillable="true" type="q45:OperationResultOfHospitalDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveHospital">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hospitalID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveHospitalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="RemoveHospitalResult" nillable="true" type="q46:OperationResultOfHospitalDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllHospitals">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllHospitalsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="GetAllHospitalsResult" nillable="true" type="q47:OperationResultOfArrayOfHospitalDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHospitalByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hospitalName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHospitalByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="GetHospitalByNameResult" nillable="true" type="q48:OperationResultOfHospitalDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersByUserType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="userTypeEnum" type="q49:UserTypeEnum" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersByUserTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="GetUsersByUserTypeResult" nillable="true" type="q50:OperationResultOfArrayOfUserDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="GetUserByIDResult" nillable="true" type="q51:OperationResultOfUserDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="GetUserByCodeResult" nillable="true" type="q52:OperationResultOfUserDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVerifyRecordList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="surpathCaseID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="verifyResult" type="q53:VerifyResultEnum" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVerifyRecordListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="GetVerifyRecordListResult" nillable="true" type="q54:OperationResultOfArrayOfVerifyRecordDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssignMulityPermissionToUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q55="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="permissionIDList" nillable="true" type="q55:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssignMulityPermissionToUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="AssignMulityPermissionToUserResult" nillable="true" type="q56:OperationResultOfUserDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddScreenShots">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="surpathCaseID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="screenShotDTOList" nillable="true" type="q57:ArrayOfScreenShotDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddScreenShotsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="AddScreenShotsResult" nillable="true" type="q58:OperationResultOfArrayOfScreenShotDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddDoctorFeedBackScreenShots">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="surpathCaseID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="fbScreenShotDTOList" nillable="true" type="q59:ArrayOfFbScreenShotDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddDoctorFeedBackScreenShotsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="AddDoctorFeedBackScreenShotsResult" nillable="true" type="q60:OperationResultOfArrayOfFbScreenShotDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsUserCodeAlreadyExists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsUserCodeAlreadyExistsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="IsUserCodeAlreadyExistsResult" nillable="true" type="q61:OperationResultOfUserDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSurpathCaseStatusToServer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="surpathCaseID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" minOccurs="0" name="surpathCaseStatus" type="q62:SurpathCaseStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendSurpathCaseStatusToServerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="SendSurpathCaseStatusToServerResult" nillable="true" type="q63:OperationResultOfSurpathCaseDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEngineerAssignedWorkStatistics">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEngineerAssignedWorkStatisticsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="GetEngineerAssignedWorkStatisticsResult" nillable="true" type="q64:OperationResultOfArrayOfEngineerWorkStatisticsDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEngineerFinishedWorkStatistics">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEngineerFinishedWorkStatisticsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="GetEngineerFinishedWorkStatisticsResult" nillable="true" type="q65:OperationResultOfArrayOfEngineerWorkStatisticsDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExpertAssignedWorkStatistics">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExpertAssignedWorkStatisticsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="GetExpertAssignedWorkStatisticsResult" nillable="true" type="q66:OperationResultOfArrayOfExpertWorkStatisticsDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExpertFinishedWorkStatistics">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExpertFinishedWorkStatisticsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="GetExpertFinishedWorkStatisticsResult" nillable="true" type="q67:OperationResultOfArrayOfExpertWorkStatisticsDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEngineerAverageProcessTimeStatistics">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEngineerAverageProcessTimeStatisticsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="GetEngineerAverageProcessTimeStatisticsResult" nillable="true" type="q68:OperationResultOfArrayOfEngineerAverageProcessTimeStatisticsDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExpertAverageVerifyTimeStatistics">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExpertAverageVerifyTimeStatisticsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="GetExpertAverageVerifyTimeStatisticsResult" nillable="true" type="q69:OperationResultOfArrayOfExpertAverageVerifyTimeStatisticsbN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveSurpathCaseLogicallyInDataBase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="surpathCaseID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveSurpathCaseLogicallyInDataBaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="RemoveSurpathCaseLogicallyInDataBaseResult" nillable="true" type="q70:OperationResultOfSurpathCaseDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NotifyServerFTPDataUploadFinished">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="surpathCaseID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NotifyServerFTPDataUploadFinishedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="NotifyServerFTPDataUploadFinishedResult" nillable="true" type="q71:OperationResultOfSurpathCaseDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiagnosisReportList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="surpathCaseID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiagnosisReportListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="GetDiagnosisReportListResult" nillable="true" type="q72:OperationResultOfArrayOfDiagnosisReportDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AppendDiagnosisReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="surpathCaseID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fileName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AppendDiagnosisReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="AppendDiagnosisReportResult" nillable="true" type="q73:OperationResultOfSurpathCaseDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExcludeEngineerProcessSpendTimeFromStatistics">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="surpathCaseID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="excludeReason" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExcludeEngineerProcessSpendTimeFromStatisticsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="ExcludeEngineerProcessSpendTimeFromStatisticsResult" nillable="true" type="q74:OperationResultOfSurpathCaseDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExcludeExpertVerifySpendTimeFromStatistics">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="surpathCaseID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="excludeReason" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExcludeExpertVerifySpendTimeFromStatisticsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Core" minOccurs="0" name="ExcludeExpertVerifySpendTimeFromStatisticsResult" nillable="true" type="q75:OperationResultOfSurpathCaseDTObN2_PkCvD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

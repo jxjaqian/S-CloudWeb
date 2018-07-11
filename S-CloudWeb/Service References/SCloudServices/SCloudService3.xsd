@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Application.Business.SCloud.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.0.0.240:8801/SCloudService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Infrastructure.CrossCutting.Logging" />
+  <xs:complexType name="UserDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Infrastructure.CrossCutting.Logging" base="q1:DTOLogFormatter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CellPhone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HospitalID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Permissions" nillable="true" type="tns:ArrayOfPermissionDTO" />
+          <xs:element minOccurs="0" name="TypeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserType" nillable="true" type="tns:UserTypeDTO" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserDTO" nillable="true" type="tns:UserDTO" />
+  <xs:complexType name="ArrayOfPermissionDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PermissionDTO" nillable="true" type="tns:PermissionDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPermissionDTO" nillable="true" type="tns:ArrayOfPermissionDTO" />
+  <xs:complexType name="PermissionDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Infrastructure.CrossCutting.Logging" base="q2:DTOLogFormatter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PermissionDescribe" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PermissionID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PermissionName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PermissionValue" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PermissionDTO" nillable="true" type="tns:PermissionDTO" />
+  <xs:complexType name="UserTypeDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Infrastructure.CrossCutting.Logging" base="q3:DTOLogFormatter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="TypeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TypeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TypeValue" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserTypeDTO" nillable="true" type="tns:UserTypeDTO" />
+  <xs:complexType name="ArrayOfQueryDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QueryDTO" nillable="true" type="tns:QueryDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQueryDTO" nillable="true" type="tns:ArrayOfQueryDTO" />
+  <xs:complexType name="QueryDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Infrastructure.CrossCutting.Logging" base="q4:DTOLogFormatter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Age" type="xs:int" />
+          <xs:element minOccurs="0" name="AssignPersonCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AssignPersonName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AssignTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ClinicalDiagnosis" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DenyCount" type="xs:int" />
+          <xs:element minOccurs="0" name="DoctorCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DoctorName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DueDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EngineerCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EngineerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExcludeProcessTimeReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExcludeVerifyTimeReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExpertAdvise" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExpertCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExpertName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FeedbackDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FeedbackID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FeedbackResult" type="xs:int" />
+          <xs:element minOccurs="0" name="FirstProcessSpendTime" type="xs:int" />
+          <xs:element minOccurs="0" name="FirstVerifySpendTime" type="xs:int" />
+          <xs:element minOccurs="0" name="Height" type="xs:decimal" />
+          <xs:element minOccurs="0" name="HospitalName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ImageCount" type="xs:int" />
+          <xs:element minOccurs="0" name="IsDelete" type="xs:int" />
+          <xs:element minOccurs="0" name="IsExcludeProcessTime" type="xs:int" />
+          <xs:element minOccurs="0" name="IsExcludeVerifyTime" type="xs:int" />
+          <xs:element minOccurs="0" name="IsNeedSurgeryPlan" type="xs:int" />
+          <xs:element minOccurs="0" name="PatientID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProcessID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProcessResult" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProcessSpendTime" type="xs:int" />
+          <xs:element minOccurs="0" name="ProcessTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PublishTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ReconstructionRequirement" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Sex" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" type="xs:int" />
+          <xs:element minOccurs="0" name="SubmitTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SurgeryPlan" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SurpathCaseID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UploadPersonCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UploadPersonName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UploadTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="VerifyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VerifySpendTime" type="xs:int" />
+          <xs:element minOccurs="0" name="VerifyTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Weight" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="QueryDTO" nillable="true" type="tns:QueryDTO" />
+  <xs:complexType name="SurpathCaseDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Infrastructure.CrossCutting.Logging" base="q5:DTOLogFormatter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AssignPersonCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AssignPersonName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AssignTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ClinicalDiagnosis" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DenyCount" type="xs:int" />
+          <xs:element minOccurs="0" name="DiagnosisReport" nillable="true" type="tns:ArrayOfDiagnosisReportDTO" />
+          <xs:element minOccurs="0" name="DoctorCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DoctorName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DueDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ExcludeProcessTimeReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExcludeVerifyTimeReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExpertVerify" nillable="true" type="tns:ExpertVerifyDTO" />
+          <xs:element minOccurs="0" name="FirstProcessSpendTime" type="xs:int" />
+          <xs:element minOccurs="0" name="FirstVerifySpendTime" type="xs:int" />
+          <xs:element minOccurs="0" name="HospitalName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ImageCount" type="xs:int" />
+          <xs:element minOccurs="0" name="IsDelete" type="xs:int" />
+          <xs:element minOccurs="0" name="IsExcludeProcessTime" type="xs:int" />
+          <xs:element minOccurs="0" name="IsExcludeVerifyTime" type="xs:int" />
+          <xs:element minOccurs="0" name="IsNeedSurgeryPlan" type="xs:int" />
+          <xs:element minOccurs="0" name="Patient" nillable="true" type="tns:PatientDTO" />
+          <xs:element minOccurs="0" name="PostProcessor" nillable="true" type="tns:PostProcessorDTO" />
+          <xs:element minOccurs="0" name="ProcessSpendTime" type="xs:int" />
+          <xs:element minOccurs="0" name="ReconstructionRequirement" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" type="xs:int" />
+          <xs:element minOccurs="0" name="SurpathCaseID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UploadPersonCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UploadPersonName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UploadTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="VerifySpendTime" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SurpathCaseDTO" nillable="true" type="tns:SurpathCaseDTO" />
+  <xs:complexType name="ArrayOfDiagnosisReportDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DiagnosisReportDTO" nillable="true" type="tns:DiagnosisReportDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDiagnosisReportDTO" nillable="true" type="tns:ArrayOfDiagnosisReportDTO" />
+  <xs:complexType name="DiagnosisReportDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DiagnosisReportDTO" nillable="true" type="tns:DiagnosisReportDTO" />
+  <xs:complexType name="ExpertVerifyDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Infrastructure.CrossCutting.Logging" base="q6:DTOLogFormatter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ExpertAdvise" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExpertCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExpertName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PublishTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SurgeryPlan" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VerifyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VerifyTime" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExpertVerifyDTO" nillable="true" type="tns:ExpertVerifyDTO" />
+  <xs:complexType name="PatientDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Infrastructure.CrossCutting.Logging" base="q7:DTOLogFormatter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Age" type="xs:int" />
+          <xs:element minOccurs="0" name="Height" type="xs:decimal" />
+          <xs:element minOccurs="0" name="PatientID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Sex" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Weight" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PatientDTO" nillable="true" type="tns:PatientDTO" />
+  <xs:complexType name="PostProcessorDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Infrastructure.CrossCutting.Logging" base="q8:DTOLogFormatter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EngineerCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EngineerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProcessID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProcessResult" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProcessTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SubmitTime" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PostProcessorDTO" nillable="true" type="tns:PostProcessorDTO" />
+  <xs:simpleType name="UserTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="utUploadPerson" />
+      <xs:enumeration value="utAssignPerson" />
+      <xs:enumeration value="utEngineer" />
+      <xs:enumeration value="utExpert" />
+      <xs:enumeration value="utDoctor" />
+      <xs:enumeration value="utAdministrator" />
+      <xs:enumeration value="utInternetUser" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UserTypeEnum" nillable="true" type="tns:UserTypeEnum" />
+  <xs:simpleType name="IsNeedSurgeryPlanEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="inspNo" />
+      <xs:enumeration value="inspYes" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="IsNeedSurgeryPlanEnum" nillable="true" type="tns:IsNeedSurgeryPlanEnum" />
+  <xs:simpleType name="SurpathCaseStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="scsUploaded" />
+      <xs:enumeration value="scsAssigned" />
+      <xs:enumeration value="scsReconstructing" />
+      <xs:enumeration value="scsReconstructed" />
+      <xs:enumeration value="scsVerifying" />
+      <xs:enumeration value="scsReconstructionDenied" />
+      <xs:enumeration value="scsPublished" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SurpathCaseStatus" nillable="true" type="tns:SurpathCaseStatus" />
+  <xs:simpleType name="PermissionEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="peUpload" />
+      <xs:enumeration value="peAssign" />
+      <xs:enumeration value="peReconstruct" />
+      <xs:enumeration value="peVerify" />
+      <xs:enumeration value="peView" />
+      <xs:enumeration value="peSystemConfig" />
+      <xs:enumeration value="peStatistics" />
+      <xs:enumeration value="peDiagnosisReport" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PermissionEnum" nillable="true" type="tns:PermissionEnum" />
+  <xs:complexType name="ArrayOfScreenShotDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ScreenShotDTO" nillable="true" type="tns:ScreenShotDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfScreenShotDTO" nillable="true" type="tns:ArrayOfScreenShotDTO" />
+  <xs:complexType name="ScreenShotDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Infrastructure.CrossCutting.Logging" base="q9:DTOLogFormatter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ScreenShotID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VerifyRecordID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ScreenShotDTO" nillable="true" type="tns:ScreenShotDTO" />
+  <xs:simpleType name="DoctorFeedbackTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="dftUnFeedback" />
+      <xs:enumeration value="dfUnStatisfied" />
+      <xs:enumeration value="dftSatisfied" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DoctorFeedbackTypeEnum" nillable="true" type="tns:DoctorFeedbackTypeEnum" />
+  <xs:complexType name="FeedbackDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Infrastructure.CrossCutting.Logging" base="q10:DTOLogFormatter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FeedbackDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FeedbackID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FeedbackResult" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FeedbackDTO" nillable="true" type="tns:FeedbackDTO" />
+  <xs:complexType name="ArrayOfFbScreenShotDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FbScreenShotDTO" nillable="true" type="tns:FbScreenShotDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFbScreenShotDTO" nillable="true" type="tns:ArrayOfFbScreenShotDTO" />
+  <xs:complexType name="FbScreenShotDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FBScreenShotID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FeedBackID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FbScreenShotDTO" nillable="true" type="tns:FbScreenShotDTO" />
+  <xs:complexType name="ArrayOfUserDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserDTO" nillable="true" type="tns:UserDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserDTO" nillable="true" type="tns:ArrayOfUserDTO" />
+  <xs:complexType name="ArrayOfUserTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserTypeDTO" nillable="true" type="tns:UserTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserTypeDTO" nillable="true" type="tns:ArrayOfUserTypeDTO" />
+  <xs:complexType name="HospitalDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Infrastructure.CrossCutting.Logging" base="q11:DTOLogFormatter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HospitalID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HospitalName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Telephone" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HospitalDTO" nillable="true" type="tns:HospitalDTO" />
+  <xs:complexType name="ArrayOfHospitalDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HospitalDTO" nillable="true" type="tns:HospitalDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHospitalDTO" nillable="true" type="tns:ArrayOfHospitalDTO" />
+  <xs:simpleType name="VerifyResultEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="vrALL" />
+      <xs:enumeration value="vrUnApprove" />
+      <xs:enumeration value="vrApprove" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="VerifyResultEnum" nillable="true" type="tns:VerifyResultEnum" />
+  <xs:complexType name="ArrayOfVerifyRecordDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VerifyRecordDTO" nillable="true" type="tns:VerifyRecordDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVerifyRecordDTO" nillable="true" type="tns:ArrayOfVerifyRecordDTO" />
+  <xs:complexType name="VerifyRecordDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Infrastructure.CrossCutting.Logging" base="q12:DTOLogFormatter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ExpertAdvise" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VerifyEndTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="VerifyID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VerifyRecordID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VerifyResult" type="xs:int" />
+          <xs:element minOccurs="0" name="VerifyStartTime" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VerifyRecordDTO" nillable="true" type="tns:VerifyRecordDTO" />
+  <xs:complexType name="ArrayOfEngineerWorkStatisticsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EngineerWorkStatisticsDTO" nillable="true" type="tns:EngineerWorkStatisticsDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEngineerWorkStatisticsDTO" nillable="true" type="tns:ArrayOfEngineerWorkStatisticsDTO" />
+  <xs:complexType name="EngineerWorkStatisticsDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Infrastructure.CrossCutting.Logging" base="q13:DTOLogFormatter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Count" type="xs:int" />
+          <xs:element minOccurs="0" name="EngineerName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EngineerWorkStatisticsDTO" nillable="true" type="tns:EngineerWorkStatisticsDTO" />
+  <xs:complexType name="ArrayOfExpertWorkStatisticsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExpertWorkStatisticsDTO" nillable="true" type="tns:ExpertWorkStatisticsDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExpertWorkStatisticsDTO" nillable="true" type="tns:ArrayOfExpertWorkStatisticsDTO" />
+  <xs:complexType name="ExpertWorkStatisticsDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Infrastructure.CrossCutting.Logging" base="q14:DTOLogFormatter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Count" type="xs:int" />
+          <xs:element minOccurs="0" name="ExpertName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExpertWorkStatisticsDTO" nillable="true" type="tns:ExpertWorkStatisticsDTO" />
+  <xs:complexType name="ArrayOfEngineerAverageProcessTimeStatisticsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EngineerAverageProcessTimeStatisticsDTO" nillable="true" type="tns:EngineerAverageProcessTimeStatisticsDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEngineerAverageProcessTimeStatisticsDTO" nillable="true" type="tns:ArrayOfEngineerAverageProcessTimeStatisticsDTO" />
+  <xs:complexType name="EngineerAverageProcessTimeStatisticsDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Infrastructure.CrossCutting.Logging" base="q15:DTOLogFormatter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AverageProcessTime" type="xs:int" />
+          <xs:element minOccurs="0" name="EngineerName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EngineerAverageProcessTimeStatisticsDTO" nillable="true" type="tns:EngineerAverageProcessTimeStatisticsDTO" />
+  <xs:complexType name="ArrayOfExpertAverageVerifyTimeStatistics">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExpertAverageVerifyTimeStatistics" nillable="true" type="tns:ExpertAverageVerifyTimeStatistics" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExpertAverageVerifyTimeStatistics" nillable="true" type="tns:ArrayOfExpertAverageVerifyTimeStatistics" />
+  <xs:complexType name="ExpertAverageVerifyTimeStatistics">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/HHYT.CoreFramework.Infrastructure.CrossCutting.Logging" base="q16:DTOLogFormatter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AverageVerifyTime" type="xs:int" />
+          <xs:element minOccurs="0" name="ExpertName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExpertAverageVerifyTimeStatistics" nillable="true" type="tns:ExpertAverageVerifyTimeStatistics" />
+</xs:schema>

@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <title>主页</title>
+    
+    <script type="text/javascript" src="tabledemo/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="tabledemo/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="tabledemo/jquery-ui.js"></script>
+    <script type="text/javascript" src="tabledemo/bootstrap.min.js"></script>
+    <script type="text/javascript" src="tabledemo/bootstrap.js"></script>
+    <!--jquery grid-->
+    <script type="text/javascript" src="tabledemo/grid.locale-cn.js"></script>
+    <script type="text/javascript" src="tabledemo/jquery.jqGrid.min.js"></script>
+    <!--<script type="text/javascript" src="tabledemo/ui.multiselect.js"></script>-->
+
+    <script type="text/javascript" src="tabledemo/popper.min.js"></script>
+    <script type="text/javascript" src="tabledemo/demo.js" charset="gb2312"></script>
+    
+
+    <link href="tabledemo/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="tabledemo/bootstrap.css" type="text/css" rel="stylesheet">
+    <link href="tabledemo/jquery-ui.min.css" type="text/css" rel="stylesheet">
+    <link href="tabledemo/jquery-ui.css" type="text/css" rel="stylesheet">
+    <link href="tabledemo/octicons.css" type="text/css" rel="stylesheet">
+
+    <link href="tabledemo/ui.jqgrid-bootstrap4.css" type="text/css" rel="stylesheet">
+    <!--<link href="tabledemo/ui.multiselect.css" type="text/css" rel="stylesheet">-->
+
+
+
+
+    <script>
+		$.jgrid.defaults.width = 1910;
+		$.jgrid.defaults.responsive = true;
+		//$.jgrid.defaults.styleUI = 'Bootstrap4';
+		$.jgrid.defaults.iconSet = "Octicons";
+    </script>
+    <style type="text/css">
+        .ui-jqgrid {
+            font-size: 1.2rem;
+        }
+        th {
+            text-align:center;/** 设置水平方向居中 */
+            vertical-align:middle/** 设置垂直方向居中 */
+        }
+    </style>
+
+    <style>
+        .button {
+            width: auto;
+            padding: 7px 15px;
+            background: #617798;
+            border: 0;
+            font-size: 14px;
+            color: #FFFFFF;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    
+</head>
+<body>
+    
+   
+
+    <table cellspacing="0" width="100%" align="center">
+        <tr height="40px">
+            <td colspan="2" id="mess"></td>
+            <td colspan="2" id="times" align="right"  style="padding-right:25px"></td>
+        </tr>
+        <tr height="40px">
+            <td width="100px">上传时间:</td>
+            <td width="300px">
+                <select style="width:220px;" >
+                    <option class="otherselect" value="-1"> </option>
+                    <option class="otherselect" value="今天">今天</option>
+                    <option class="otherselect" value="昨天">昨天</option>
+                    <option class="otherselect" value="三天内">三天内</option>
+                    <option class="otherselect" value="一周内">一周内</option>
+                    <option class="otherselect" value="一月内">一月内</option>
+                    <option id="myselect" value="自定义">自定义</option>
+                </select>
+            </td>
+            <td colspan="2" width="400px">
+                <span id="show" style="display:none"><input type="text" class="datepicker">至<input type="text" class="datepicker"></span>
+            </td>
+        </tr>
+
+        <tr height="40px">
+            <td width="100px">医院名称:</td>
+            <td width="300px">
+                <select style="width:220px;" id="hospitalname">
+                    <option value="-1"> </option>
+
+                </select>
+            </td>
+            <td width="100px">患者姓名：</td>
+            <td width="300px"><input style="width:220px;" type="text" name="pname" /></td>
+        </tr>
+        <tr height="40px">
+            <td width="100px">案例状态:</td>
+            <td>
+                <div id="checkBoxList">
+
+                    <input type="checkbox" value="已上传" />已上传
+
+                    <input type="checkbox" value="已分派" />已分派
+
+                    <input type="checkbox" value="重建中" />重建中
+
+                    <input type="checkbox" value="已重建" />已重建
+
+                    <input type="checkbox" value="审核中" />审核中
+
+                    <input type="checkbox" value="重建未通过" />重建未通过
+
+                    <input type="checkbox" value="已发布" />已发布
+
+                </div>
+                </td>
+            <td  colspan="2">
+                <span>
+                    <input style="margin-right:25px;" type="button" value="全选" id="selectAll" class="button"/>
+
+                    <input style="margin-right:25px;" type="button" value="全不选" id="unSelect" class="button"/>
+
+                    <input type="button" value="反选" id="reverseSelect" class="button"/>
+                </span>
+            </td>
+        </tr>
+        <tr height="40px">
+            <td colspan="4" style="text-align:left" >
+                 <input style="margin-left:25px" type="button" value="查询" id="finddetail" class="button"/>
+            </td>
+        </tr>
+    </table>
+
+    <div width="100%" align="center">
+        <table id="list" ><tr><td /></tr></table>
+        <div id="pager"></div>
+    </div>
+
+</body>
+</html>
